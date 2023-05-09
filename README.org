@@ -4,7 +4,7 @@
 包含了一些必要组件的配置
 
 ** 主要特性(init.el)
-
+#+BEGIN_SRC org
 包下载: straight.el
 配置管理: use-package
 模式编辑: evil
@@ -14,20 +14,21 @@ lsp: eglot
 undo: vundo
 输入法: rime (pyim contained but disabled)
 版本控制: magit
+#+END_SRC
 
 *** 配置特点
-
+#+begin_src org
 启动速度快, 非 dump 启动也较快;
 尽量使用了内置包或者兼容性较好的包;
 缺点: evil 快捷键和默认快捷键冲突较多
-
+#+end_src
 ** meoweland.el
-
+#+begin_src org
 包下载: straight.el
 配置管理: use-package
 模式编辑: meow
 补全框架: vertico+company+orderless
-
+#+end_src
 ** mini-init.el
 最小启动配置, 测试使用, 只包含了必要且轻量的配置
 
