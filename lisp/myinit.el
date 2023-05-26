@@ -143,10 +143,12 @@
   (setq catppuccin-flavor 'mocha))
 
 ;; 亮色主题和暗色主题
+
+(add-to-list 'custom-theme-load-path "~/.emacs.d/straight/repos/everforest-emacs/")
 (setq day-theme-list '( modus-operandi-tinted ef-day ef-spring ef-summer ef-frost ef-light ef-cyprus ef-duo-light ef-trio-light ef-tritanopia-light ef-deuteranopia-light))
 (setq dark-theme-list '( modus-vivendi-tinted ef-night ef-autumn ef-winter ef-bio ef-cherie ef-duo-dark ef-trio-dark ef-tritanopia-dark ef-deuteranopia-dark))
-(setq day-theme-list '(modus-operandi-tinted))
-(setq dark-theme-list '(modus-vivendi-tinted))
+(setq day-theme-list '(modus-operandi-tinted everforest-hard-light))
+(setq dark-theme-list '(modus-vivendi-tinted everforest-hard-dark))
 
 ;; 随机选取主题
 ;;;###autoload
@@ -565,5 +567,8 @@
   :config
   (telega-notifications-mode 1)
   (telega-mode-line-mode 1))
+
+(use-package magit
+  :straight t)
 
 (provide 'myinit)

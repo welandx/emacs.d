@@ -40,6 +40,8 @@
  ((string-equal system-type "gnu/linux") ; linux
   (when (member "Cascadia Code" (font-family-list))
     (set-frame-font "Cascadia Code-14" t t))))
+(set-frame-font "MonoLisa Nasy-13" t t)
+(set-frame-font "Latin Modern Mono-15" t t)
 ;; set font for symbols
 (set-fontset-font
  t
@@ -54,6 +56,7 @@
   ((string-equal system-type "gnu/linux")
    (cond
     ((member "Symbola" (font-family-list)) "Symbola")))))
+
 
 (progn
   ;; set font for emoji (if before emacs 28, should come after setting symbols. emacs 28 now has 'emoji . before, emoji is part of 'symbol)
@@ -87,6 +90,7 @@
     ((member "Heiti TC" (font-family-list)) "Heiti TC")))
   ((string-equal system-type "gnu/linux")
    (cond
+    ((member "LXGW WenKai" (font-family-list)) "LXGW WenKai")
     ((member "WenQuanYi Micro Hei" (font-family-list)) "WenQuanYi Micro Hei")))))
 
 
@@ -174,5 +178,12 @@
 
 (setq word-wrap-by-category t)
 
-(use-package magit
-  :straight t)
+(use-package denote
+  :straight t
+  )
+
+;;(use-package everforest-hard-dark-theme
+;;  :straight
+;;  (:host github :repo "Theory-of-Everything/everforest-emacs"))
+(add-to-list 'custom-theme-load-path "~/.emacs.d/straight/repos/everforest-emacs/")
+(setq telega-emoji-font-family "Noto Color Emoji")
