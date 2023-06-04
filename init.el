@@ -187,3 +187,15 @@
 ;;  (:host github :repo "Theory-of-Everything/everforest-emacs"))
 (add-to-list 'custom-theme-load-path "~/.emacs.d/straight/repos/everforest-emacs/")
 (setq telega-emoji-font-family "Noto Color Emoji")
+
+(setq treesit-font-lock-level 4)
+
+
+(use-package dired
+  :demand t
+  :hook (dired-mode . dired-hide-details-mode)
+  :custom
+  (dired-dwim-target t)
+  (dired-listing-switches "-alGhv --group-directories-first")
+  (dired-recursive-copies 'always)
+  (dired-kill-when-opening-new-dired-buffer t))
